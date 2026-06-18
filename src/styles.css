@@ -1,1 +1,372 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Aptos, 'Segoe UI', 'IBM Plex Sans', Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #ffffff;
+}
+
+main {
+  min-height: calc(100vh - 140px);
+}
+
+.navbar {
+  height: 70px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111827;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #38bdf8;
+}
+
+.hero {
+  min-height: calc(100vh - 70px);
+  padding: 80px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(30, 64, 175, 0.9)),
+    linear-gradient(45deg, rgba(56, 189, 248, 0.18) 0 25%, transparent 25% 100%);
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 860px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.eyebrow,
+.section-kicker,
+.role {
+  display: inline-block;
+  color: #38bdf8;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-kicker {
+  color: #1e40af;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+button,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  background: #38bdf8;
+  color: #0f172a;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  min-height: 48px;
+}
+
+button:hover,
+.button:hover {
+  background: #0ea5e9;
+}
+
+.button-secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.button-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.services {
+  padding: 80px 40px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.services h2,
+.contact h2,
+.trust-section h2,
+.home-cta h2,
+.contact-page h1 {
+  font-size: 36px;
+  line-height: 1.15;
+  margin: 0 0 40px;
+}
+
+.services h2 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+}
+
+.cards {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  width: 300px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  border-top: 4px solid #38bdf8;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #1e40af;
+}
+
+.card p {
+  line-height: 1.5;
+}
+
+.trust-section {
+  padding: 80px 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 48px;
+  align-items: start;
+  background: white;
+}
+
+.trust-content {
+  max-width: 560px;
+}
+
+.trust-content p,
+.home-cta p,
+.page-intro {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.trust-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.trust-grid article {
+  padding: 24px;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.trust-grid strong {
+  color: #38bdf8;
+  font-size: 18px;
+}
+
+.trust-grid h3 {
+  margin: 10px 0;
+  color: #1e40af;
+}
+
+.trust-grid p {
+  margin: 0;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.home-cta {
+  padding: 70px 40px;
+  text-align: center;
+  background: #0f172a;
+  color: white;
+}
+
+.home-cta h2 {
+  margin-bottom: 16px;
+}
+
+.home-cta p {
+  color: #cbd5e1;
+  max-width: 680px;
+  margin: 0 auto 28px;
+}
+
+.contact {
+  padding: 80px 40px;
+  text-align: center;
+  background: white;
+}
+
+.contact-page h1 {
+  margin-bottom: 18px;
+}
+
+.page-intro {
+  max-width: 720px;
+  margin: 0 auto 36px;
+}
+
+.contact-team {
+  max-width: 960px;
+  margin: 0 auto 46px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.contact-card {
+  padding: 30px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #dbeafe;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.contact-card h2 {
+  font-size: 28px;
+  margin: 0 0 14px;
+}
+
+.contact-card p {
+  margin: 0;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.role {
+  color: #1e40af;
+  margin-bottom: 10px;
+}
+
+form {
+  max-width: 500px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+footer {
+  padding: 25px;
+  background: #111827;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .services,
+  .trust-section,
+  .home-cta,
+  .contact {
+    padding: 60px 22px;
+  }
+
+  .services h2,
+  .contact h2,
+  .trust-section h2,
+  .home-cta h2,
+  .contact-page h1 {
+    font-size: 30px;
+  }
+
+  .trust-section,
+  .contact-team {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
