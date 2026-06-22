@@ -16,6 +16,19 @@
   padding: 4px;
 }
 
+.language-toggle {
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: transparent;
+  color: white;
+  font-size: 14px;
+}
+
+.language-toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
 @media (max-width: 768px) {
   .brand {
     justify-content: center;
@@ -25,4 +38,35 @@
     width: 48px;
     height: 48px;
   }
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  display: flex;
+  align-items: center;          /* Centra verticalmente todos los hijos */
+  height: 70px;                 /* Altura fija para notar el centrado */
+  padding: 0 1rem;
+  gap: 1rem;                    /* Espacio entre logo, nav y botón (opcional) */
+}
+
+/* El logo no debe encogerse */
+.brand {
+  flex-shrink: 0;
+  /* el resto de estilos que ya tienes se conservan */
+}
+
+/* ====== NAV (solo los enlaces) ====== */
+nav {
+  display: flex;
+  align-items: center;          /* Centra verticalmente los enlaces dentro del nav */
+  gap: 1.5rem;                  /* Espacio entre Home, About, etc. (ajústalo a tu gusto) */
+  flex: 1;                      /* Ocupa todo el espacio disponible */
+  justify-content: center;      /* ¡Centra los enlaces horizontalmente en el espacio sobrante! */
+}
+
+/* ====== BOTÓN DE IDIOMA ====== */
+.language-toggle {
+  flex-shrink: 0;               /* No se encoja */
+  margin-left: auto;            /* Lo empuja a la derecha (redundante con el flex: 1, pero queda más claro) */
+  /* tus estilos actuales se mantienen */
 }

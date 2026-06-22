@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+
+import { Language } from '../../services/language';
 
 @Component({
   selector: 'app-contact-page',
@@ -6,4 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './contact-page.html',
   styleUrl: './contact-page.css',
 })
-export class ContactPage {}
+export class ContactPage {
+  readonly language = inject(Language);
+}

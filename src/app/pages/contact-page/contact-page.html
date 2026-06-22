@@ -1,35 +1,24 @@
 <section class="contact contact-page">
-  <span class="section-kicker">Contacto</span>
-  <h1>Habla con Serpec Ingenieros S.A.S</h1>
+  <span class="section-kicker">{{ language.copy().contactPage.kicker }}</span>
+  <h1>{{ language.copy().contactPage.title }}</h1>
   <p class="page-intro">
-    Estamos listos para revisar tus necesidades, coordinar información técnica
-    y orientar el siguiente paso de tu proyecto.
+    {{ language.copy().contactPage.intro }}
   </p>
 
   <div class="contact-team">
-    <article class="contact-card">
-      <span class="role">Jefe administrativa</span>
-      <h2>Yolanda Perico</h2>
-      <p>
-        Espacio para agregar una breve descripción sobre su rol, experiencia o
-        responsabilidades dentro de Serpec Ingenieros S.A.S.
-      </p>
-    </article>
-
-    <article class="contact-card">
-      <span class="role">Jefe de campo</span>
-      <h2>Jesus Serrano</h2>
-      <p>
-        Espacio para agregar una breve descripción sobre su trabajo en campo,
-        coordinación operativa o experiencia técnica.
-      </p>
-    </article>
+    @for (member of language.copy().contactPage.team; track member.name) {
+      <article class="contact-card">
+        <span class="role">{{ member.role }}</span>
+        <h2>{{ member.name }}</h2>
+        <p>{{ member.description }}</p>
+      </article>
+    }
   </div>
 
   <form>
-    <input type="text" placeholder="Tu nombre">
-    <input type="email" placeholder="Tu correo">
-    <textarea placeholder="Cuéntanos sobre tu proyecto"></textarea>
-    <button type="submit">Enviar mensaje</button>
+    <input type="text" [placeholder]="language.copy().contactPage.form.namePlaceholder">
+    <input type="email" [placeholder]="language.copy().contactPage.form.emailPlaceholder">
+    <textarea [placeholder]="language.copy().contactPage.form.messagePlaceholder"></textarea>
+    <button type="submit">{{ language.copy().contactPage.form.submit }}</button>
   </form>
 </section>

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+
+import { Language } from '../../services/language';
 
 @Component({
   selector: 'app-footer',
@@ -6,4 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './footer.html',
   styleUrl: './footer.css',
 })
-export class Footer {}
+export class Footer {
+  readonly language = inject(Language);
+}

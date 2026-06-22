@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+
+import { Language } from '../../services/language';
 
 @Component({
   selector: 'app-proyectos',
@@ -6,4 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './proyectos.html',
   styleUrl: './proyectos.css',
 })
-export class Proyectos {}
+export class Proyectos {
+  readonly language = inject(Language);
+}

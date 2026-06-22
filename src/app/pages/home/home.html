@@ -1,87 +1,56 @@
 <section id="inicio" class="hero">
   <div class="hero-content">
-    <span class="eyebrow">Ingeniería, operación y control en campo</span>
-    <h1>Serpec Ingenieros S.A.S</h1>
+    <span class="eyebrow">{{ language.copy().home.hero.eyebrow }}</span>
+    <h1>{{ language.copy().home.hero.title }}</h1>
     <p>
-      Acompañamos proyectos técnicos con planeación, personal especializado y
-      seguimiento responsable en cada etapa de ejecución.
+      {{ language.copy().home.hero.description }}
     </p>
 
     <div class="hero-actions">
-      <a class="button" routerLink="/contacto">Hablar con el equipo</a>
-      <a class="button button-secondary" href="#servicios">Ver servicios</a>
+      <a class="button" routerLink="/contacto">{{ language.copy().home.hero.contactAction }}</a>
+      <a class="button button-secondary" href="#servicios">{{ language.copy().home.hero.servicesAction }}</a>
     </div>
   </div>
 </section>
 
 <section id="servicios" class="services">
-  <span class="section-kicker">Qué hacemos</span>
-  <h2>Soluciones para proyectos de ingeniería</h2>
+  <span class="section-kicker">{{ language.copy().home.services.kicker }}</span>
+  <h2>{{ language.copy().home.services.title }}</h2>
 
   <div class="cards">
-    <article class="card">
-      <h3>Planeación técnica</h3>
-      <p>
-        Organizamos recursos, tiempos y requerimientos para que cada proyecto
-        avance con una ruta clara desde el inicio.
-      </p>
-    </article>
-
-    <article class="card">
-      <h3>Ejecución en campo</h3>
-      <p>
-        Coordinamos actividades operativas con personal capacitado, supervisión
-        directa y enfoque en cumplimiento.
-      </p>
-    </article>
-
-    <article class="card">
-      <h3>Control y seguimiento</h3>
-      <p>
-        Revisamos avances, documentamos procesos y mantenemos comunicación
-        constante para tomar decisiones a tiempo.
-      </p>
-    </article>
+    @for (service of language.copy().home.services.cards; track service.title) {
+      <article class="card">
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+      </article>
+    }
   </div>
 </section>
 
 <section class="trust-section">
   <div class="trust-content">
-    <span class="section-kicker">Nuestra forma de trabajar</span>
-    <h2>Orden técnico, responsabilidad y presencia en obra</h2>
+    <span class="section-kicker">{{ language.copy().home.trust.kicker }}</span>
+    <h2>{{ language.copy().home.trust.title }}</h2>
     <p>
-      En Serpec Ingenieros S.A.S trabajamos con una visión práctica: entender
-      las necesidades del proyecto, coordinar al equipo adecuado y responder con
-      seriedad durante la ejecución.
+      {{ language.copy().home.trust.description }}
     </p>
   </div>
 
   <div class="trust-grid">
-    <article>
-      <strong>01</strong>
-      <h3>Diagnóstico claro</h3>
-      <p>Levantamos información del proyecto para definir prioridades y alcance.</p>
-    </article>
-
-    <article>
-      <strong>02</strong>
-      <h3>Coordinación constante</h3>
-      <p>Mantenemos comunicación entre área administrativa, campo y cliente.</p>
-    </article>
-
-    <article>
-      <strong>03</strong>
-      <h3>Cumplimiento en sitio</h3>
-      <p>Ejecutamos con seguimiento, orden y control de las actividades pactadas.</p>
-    </article>
+    @for (step of language.copy().home.trust.steps; track step.number) {
+      <article>
+        <strong>{{ step.number }}</strong>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.description }}</p>
+      </article>
+    }
   </div>
 </section>
 
 <section class="home-cta">
-  <h2>Conversemos sobre tu próximo proyecto</h2>
+  <h2>{{ language.copy().home.cta.title }}</h2>
   <p>
-    Nuestro equipo puede orientarte sobre el alcance, la ejecución y el soporte
-    que necesita tu obra o servicio técnico.
+    {{ language.copy().home.cta.description }}
   </p>
-  <a class="button" routerLink="/contacto">Ir a contacto</a>
+  <a class="button" routerLink="/contacto">{{ language.copy().home.cta.action }}</a>
 </section>

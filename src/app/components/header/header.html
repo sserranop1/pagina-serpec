@@ -1,13 +1,17 @@
 <header class="navbar">
   <a class="brand" routerLink="/">
-    <img class="imagen-logo" src="/LOGO SERPEC.png" alt="Logo de Serpec Ingenieros S.A.S">
+    <img class="imagen-logo" src="/LOGO SERPEC.png" [alt]="language.copy().header.logoAlt">
     <span class="logo">Serpec Ingenieros S.A.S</span>
   </a>
 
   <nav>
-    <a routerLink="/">Inicio</a>
-    <a routerLink="/nosotros">Nosotros</a>
-    <a routerLink="/contacto">Contacto</a>
-    <a routerLink="/proyectos">Proyectos</a>
+    <a routerLink="/">{{ language.copy().header.nav.home }}</a>
+    <a routerLink="/nosotros">{{ language.copy().header.nav.about }}</a>
+    <a routerLink="/contacto">{{ language.copy().header.nav.contact }}</a>
+    <a routerLink="/proyectos">{{ language.copy().header.nav.projects }}</a>
   </nav>
+
+  <button class="language-toggle" (click)="language.toggleLanguage()">
+    {{ language.copy().header.switchLanguage }}
+  </button>
 </header>

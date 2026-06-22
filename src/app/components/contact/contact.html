@@ -1,11 +1,11 @@
 <section id="contacto" class="contact">
-  <h2>Contacto</h2>
-  <p>Escríbeme para trabajar juntos en tu próximo proyecto.</p>
+  <h2>{{ language.copy().shared.contact.title }}</h2>
+  <p>{{ language.copy().shared.contact.description }}</p>
 
   <form>
-    <input type="text" placeholder="Tu nombre">
-    <input type="email" placeholder="Tu correo">
-    <textarea placeholder="Tu mensaje"></textarea>
-    <button type="submit">Enviar</button>
+    <input type="text" [placeholder]="language.copy().shared.contact.form.namePlaceholder">
+    <input type="email" [placeholder]="language.copy().shared.contact.form.emailPlaceholder">
+    <textarea [placeholder]="language.copy().shared.contact.form.messagePlaceholder"></textarea>
+    <button type="submit">{{ language.copy().shared.contact.form.submit }}</button>
   </form>
 </section>
